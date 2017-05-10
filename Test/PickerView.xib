@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EcI-tp-OSE" customClass="PickerView" customModule="Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryT-NH-i73">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Lsg-6J-y1W"/>
+                        <barButtonItem style="plain" id="f1o-jF-6wJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rDb-in-2wy">
+                                <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="确定">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="certain" destination="EcI-tp-OSE" eventType="touchUpInside" id="Fwr-Et-Zvi"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5g-l0-X5H">
+                    <rect key="frame" x="0.0" y="44" width="375" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="YZD-iX-TuT"/>
+                    </constraints>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Y5g-l0-X5H" secondAttribute="bottom" id="5jd-oa-05j"/>
+                <constraint firstItem="Y5g-l0-X5H" firstAttribute="top" secondItem="ryT-NH-i73" secondAttribute="bottom" id="9Zm-bi-VlM"/>
+                <constraint firstItem="ryT-NH-i73" firstAttribute="top" secondItem="EcI-tp-OSE" secondAttribute="top" id="El8-mE-Fzw"/>
+                <constraint firstAttribute="trailing" secondItem="Y5g-l0-X5H" secondAttribute="trailing" id="ElC-5o-TN3"/>
+                <constraint firstItem="Y5g-l0-X5H" firstAttribute="leading" secondItem="EcI-tp-OSE" secondAttribute="leading" id="FgU-TT-OML"/>
+                <constraint firstItem="ryT-NH-i73" firstAttribute="leading" secondItem="EcI-tp-OSE" secondAttribute="leading" id="V6U-24-ugT"/>
+                <constraint firstAttribute="trailing" secondItem="ryT-NH-i73" secondAttribute="trailing" id="qZI-Pj-v2L"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="pickerView" destination="Y5g-l0-X5H" id="IKv-9r-0o8"/>
+            </connections>
+            <point key="canvasLocation" x="-140" y="-294"/>
+        </view>
+    </objects>
+</document>

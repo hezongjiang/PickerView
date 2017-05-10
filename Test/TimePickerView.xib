@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="WqE-cI-xx9" customClass="PickerView" customModule="Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qpR-w4-beB">
+                    <rect key="frame" x="0.0" y="44" width="375" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="ASV-re-VsR"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="516097700.20019102">
+                        <!--2017-05-10 08:28:20 +0000-->
+                    </date>
+                </datePicker>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDg-Eo-Rc3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="AQ8-rh-cdE"/>
+                        <barButtonItem style="plain" id="lgY-Ol-d6W">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="r9c-fj-q5n">
+                                <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="确定">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="certain" destination="WqE-cI-xx9" eventType="touchUpInside" id="umR-nF-XDn"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qpR-w4-beB" secondAttribute="trailing" id="CPp-Sq-bBi"/>
+                <constraint firstItem="SDg-Eo-Rc3" firstAttribute="leading" secondItem="WqE-cI-xx9" secondAttribute="leading" id="MNi-bV-erE"/>
+                <constraint firstItem="qpR-w4-beB" firstAttribute="top" secondItem="SDg-Eo-Rc3" secondAttribute="bottom" id="jlJ-v2-VNf"/>
+                <constraint firstAttribute="bottom" secondItem="qpR-w4-beB" secondAttribute="bottom" id="kLB-7G-lCU"/>
+                <constraint firstItem="qpR-w4-beB" firstAttribute="leading" secondItem="WqE-cI-xx9" secondAttribute="leading" id="q9P-gL-ddM"/>
+                <constraint firstItem="SDg-Eo-Rc3" firstAttribute="top" secondItem="WqE-cI-xx9" secondAttribute="top" id="qYe-TQ-aQZ"/>
+                <constraint firstAttribute="trailing" secondItem="SDg-Eo-Rc3" secondAttribute="trailing" id="sWo-6c-tCv"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="datePicker" destination="qpR-w4-beB" id="9Ot-m1-v2f"/>
+            </connections>
+            <point key="canvasLocation" x="15" y="-519"/>
+        </view>
+    </objects>
+</document>
